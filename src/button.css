@@ -1,0 +1,25 @@
+.button1 { height:20px;
+    width:30px;
+  position: absolute;
+  top: 8px;
+  right: 16px;
+  font-size: 18px;
+  background-color: 394867;
+}
+.button2 { height:20px;
+    width:30px;
+  position: absolute;
+  top: 8px;
+  right: 40px;
+  font-size: 18px;
+    background-color: 394867;
+}
+
+.button1:hover {
+    background: black;
+}
+
+.button2:hover {
+    background: black;
+}
+

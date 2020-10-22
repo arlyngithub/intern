@@ -1,0 +1,21 @@
+.bb{
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+ 
+  padding: 0;
+  height: auto;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  min-height: 100%;
+  min-width: 1024px;
+
+
+}
+
+.bnn{
+   opacity: 0.9;
+}
