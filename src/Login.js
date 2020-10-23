@@ -3,6 +3,7 @@ import { Grid, Form, Header, Message } from 'semantic-ui-react';
 import { Helmet } from 'react-helmet';
 import store from 'store';
 import styles from './Login.css';
+import './submit.css'
 
 class Login extends React.Component {
   constructor(props) {
@@ -28,13 +29,13 @@ class Login extends React.Component {
 
     this.setState({ error: false });
 
-    if (!(email === 'george@gmail.com' && password === 'foreman')) {
+    if (!(email === 'abc@gmail.com' && password === '123')) {
       return this.setState({ error: true });
     }
 
     console.log("you're logged in. yay!");
     store.set('loggedIn', true);
-    history.push('/bookings')
+    history.push('/home')
   }
 
   handleChange(e, { name, value }) {
@@ -54,10 +55,13 @@ class Login extends React.Component {
         <Grid.Column width={4}>
           <Form className={styles.loginForm} error={error} onSubmit={this.onSubmit}>
             <Header as="h1">Login</Header>
+            <div class="bord">
             {error && <Message
               error={error}
+
               content="That email/password is incorrect. Try again!"
             />}
+            </div>
             <Form.Input
               inline
               label="Email"
@@ -73,7 +77,7 @@ class Login extends React.Component {
               onChange={this.handleChange}
             />
             <p></p>
-            <Form.Button type="submit">Submit</Form.Button>
+            <Form.Button class = "button" type="submit">Submit</Form.Button>
           </Form>
         </Grid.Column>
       </Grid>

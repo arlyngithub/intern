@@ -1,12 +1,12 @@
 import React, { useContext, useReducer } from "react";
-import ReactDOM from "react-dom";
-import { Helmet } from 'react-helmet';
+
 import Store from "./context";
 import reducer from "./reducer";
-import {Route , Link , Switch , Redirect} from 'react-router-dom';
+import {Redirect} from 'react-router-dom';
 import isLoggedIn from './is_logged_in'
 import store from 'store';
 import { usePersistedContext, usePersistedReducer } from "./usePersist";
+import './submit.css'
 
 import TodoList from "./Components/TodoList";
 import TodoForm from "./Components/TodoForm";
@@ -17,7 +17,7 @@ const handleLogout = (history) => () => {
   history.push('/login')
 };
 
-const Bookingform = ({history})=> {
+const Home = ({history})=> {
 
   
 
@@ -40,9 +40,9 @@ const Bookingform = ({history})=> {
       <TodoForm />
       <TodoList />
       <p></p>
-     <button onClick={handleLogout(history)}> logout </button>
+     <button class="button" onClick={handleLogout(history)}> logout </button>
     </Store.Provider>
   );
 }
 
-export default Bookingform;
+export default Home;

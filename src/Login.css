@@ -16,6 +16,14 @@
 
 
 }
+
+
+.bord{
+
+  -webkit-text-stroke: 0.3px white;
+  
+}
+
 .a
 {
   background-image: url("https://www.technicalsymposium.com/TCE_CAD.jpg");
